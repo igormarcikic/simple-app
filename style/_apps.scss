@@ -1,0 +1,55 @@
+.apps {
+    background-color: #33d2fd;
+
+    .apps-inner {
+        padding: 105px 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @include large-devices {
+            flex-direction: row;
+        }
+        
+
+        .apps-left {
+            max-width: 150px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+            }
+
+            @include large-devices {
+                max-width: 450px;
+            }
+        }
+
+        .apps-right {
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            @include large-devices {
+                text-align: left;
+            }
+
+            p {
+                color: #fff;
+                margin: 25px auto;
+            }
+
+            img {
+                display: inline-block;
+                margin: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+}

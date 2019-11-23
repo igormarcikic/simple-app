@@ -1,0 +1,46 @@
+
+
+@mixin small-devices {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin medium-devices {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin large-devices {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin extra-large-devices {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @mixin button {
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    color: #393357;
+    font-weight: 600;
+    box-sizing: border-box;
+
+    @include large-devices() {
+      padding: 15px 30px;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #fe6d7b;
+      transition: all 0.2s linear;
+      border: none;
+    }
+  }
+
+
+
+// USAGE
+//   .header-title {  
+//     font-size: 2rem;  
+  
+//     @include for-phone-only {    
+//        font-size: 1rem; 
+//     }
+//  }

@@ -1,0 +1,45 @@
+@import 'reset';
+@import 'mixins';
+@import 'nav';
+@import 'header';
+@import 'offer';
+@import 'features';
+@import 'devices';
+@import 'apps';
+@import 'footer';
+
+body {
+    font-family: 'Alata', sans-serif;
+}
+
+.wrapper-inner, .offer-inner, .features-inner, .devices-inner, .apps-inner, .footer-inner, .copy-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.button {
+    text-align: center;
+    button {
+        @include button;
+        width: 250px;
+        color: #fff;
+        border-radius: 0;
+        background-image: linear-gradient(#fe6d7b, #f73f7c);
+        box-shadow: 0px 1px 19px -4px rgba(97,97,97,0.75);
+        margin-top: -30px;
+
+        @include large-devices {
+            width: 350px;
+        }
+
+        &:hover {
+            background-image: linear-gradient(#fff, #fff);
+            color: #fe6d7b;
+            transition: all 0.3s linear;
+            border-radius: 10px;
+        }
+    }
+}
+

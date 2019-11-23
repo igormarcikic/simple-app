@@ -1,0 +1,33 @@
+.devices {
+    margin: 85px auto;
+
+    .devices-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include large-devices {
+            flex-direction: row;
+        }
+
+        .devices-left {
+            max-width: 550px;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        .devices-right {
+            max-width: 500px;
+
+            h2 {
+                margin: 25px auto;
+            }
+
+            p {
+                margin: 20px auto;
+            }
+        }
+    }
+}
